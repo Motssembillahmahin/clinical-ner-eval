@@ -11,6 +11,7 @@ import os
 import numpy as np
 from transformers import (
     AutoModelForTokenClassification,
+    BertForTokenClassification,
     DataCollatorForTokenClassification,
     Trainer,
     TrainingArguments,
@@ -29,12 +30,22 @@ def train_model(model_key: str, dataset_names=None, label_mode="harmonized"):
     tokenizer, tok_fn = build_tokenize_fn(model_name)
     tokenized = ds.map(tok_fn, batched=True, remove_columns=ds["train"].column_names)
 
-    model = AutoModelForTokenClassification.from_pretrained(
-        model_name,
-        num_labels=len(labels),
-        id2label=id2label,
-        label2id=label2id,
-    )
+    try:
+        model = AutoModelForTokenClassification.from_pretrained(
+            model_name,
+            num_labels=len(labels),
+            id2label=id2label,
+            label2id=label2id,
+        )
+    except ValueError:
+        # Older BERT models (e.g. dmis-lab/biobert-base-cased-v1.1) lack
+        # model_type in config.json; load explicitly as BertForTokenClassification.
+        model = BertForTokenClassification.from_pretrained(
+            model_name,
+            num_labels=len(labels),
+            id2label=id2label,
+            label2id=label2id,
+        )
 
     out_dir = os.path.join(CHECKPOINT_DIR, model_key)
     args = TrainingArguments(
