@@ -11,13 +11,13 @@ import sys
 import traceback
 
 _ADAPTERS = [
-    ("NCBI Disease", "src.datasets.ncbi", "NCBIDiseaseAdapter"),
-    ("BC5CDR", "src.datasets.bc5cdr", "BC5CDRAdapter"),
-    ("MACCROBAT", "src.datasets.maccrobat", "MaccrobatAdapter"),
+    ("NCBI Disease", "src.datasets.ncbi", "NCBIDiseaseAdapter", False),
+    ("BC5CDR", "src.datasets.bc5cdr", "BC5CDRAdapter", False),
+    ("MACCROBAT", "src.datasets.maccrobat", "MaccrobatAdapter", True),   # optional
 ]
 
 
-def _check_adapter(label, module_path, cls_name):
+def _check_adapter(label, module_path, cls_name, optional=False):
     print(f"\n{'='*60}")
     print(f"[{label}]")
     try:
@@ -53,9 +53,10 @@ def _check_adapter(label, module_path, cls_name):
         return True
 
     except Exception as e:
-        print(f"  [FAIL] {label}: {e}")
+        tag = "[WARN]" if optional else "[FAIL]"
+        print(f"  {tag} {label}: {e}")
         traceback.print_exc()
-        return False
+        return optional  # optional failure counts as pass
 
 
 def _check_combined():

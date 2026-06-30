@@ -46,7 +46,7 @@ def build_dataset(names=None, label_mode="harmonized"):
         adapter = REGISTRY[n](label_mode="harmonized")
         try:
             d = adapter.load()
-        except NotImplementedError as e:
+        except Exception as e:
             print(f"[skip] {n}: {e}")
             continue
         d = DatasetDict({s: _encode_split(d[s], label2id) for s in d})

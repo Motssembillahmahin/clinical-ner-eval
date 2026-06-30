@@ -7,6 +7,7 @@ dependencies = [
     "transformers>=4.44",
     "torch>=2.2",
     "datasets>=2.20,<3.0",
+    "bioc>=2.0",
     "seqeval>=1.2.2",
     "evaluate>=0.4",
     "accelerate>=0.33",
