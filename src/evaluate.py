@@ -9,6 +9,15 @@ import json
 import os
 
 import numpy as np
+
+
+class _NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        return super().default(obj)
 import pandas as pd
 from seqeval.metrics import classification_report
 from transformers import (
@@ -87,7 +96,7 @@ def main():
             })
 
     with open(os.path.join(RESULTS_DIR, "full_report.json"), "w") as f:
-        json.dump(full, f, indent=2)
+        json.dump(full, f, indent=2, cls=_NpEncoder)
 
     df = pd.DataFrame(rows)
     csv_path = os.path.join(RESULTS_DIR, "comparison.csv")
