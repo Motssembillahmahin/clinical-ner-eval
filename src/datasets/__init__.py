@@ -1,9 +1,4 @@
-"""Dataset registry + combination logic.
-
-`build_dataset()` is the single entry point used by training and evaluation.
-It can return one adapter's data or the concatenation of several, all emitted in
-the shared BIO schema with a single unified label list.
-"""
+"""Dataset registry + combination logic."""
 
 from datasets import DatasetDict, concatenate_datasets
 
@@ -20,27 +15,17 @@ REGISTRY = {
     "n2c2": N2C2Adapter,
 }
 
-# The default Tier-1 combination requested: NCBI + BC5CDR + MACCROBAT.
 DEFAULT_COMBINATION = ["ncbi", "bc5cdr", "maccrobat"]
 
 
 def _encode_split(split, label2id):
-    """Map the string `bio` field onto integer ids under the unified label set."""
-
     def enc(example):
         example["labels"] = [label2id[tag] for tag in example["bio"]]
         return example
-
     return split.map(enc)
 
 
 def build_dataset(names=None, label_mode="harmonized"):
-    """Load and combine datasets into one DatasetDict under a shared label set.
-
-    In harmonized mode the unified label list is HARMONIZED_LABELS and all
-    adapters are forced into that space. Native mode only supports a single
-    dataset (combination across different native schemes is undefined).
-    """
     names = names or DEFAULT_COMBINATION
 
     if label_mode == "native":
@@ -70,7 +55,6 @@ def build_dataset(names=None, label_mode="harmonized"):
     if not loaded:
         raise RuntimeError("no datasets loaded")
 
-    # Concatenate split-by-split, keeping only the columns the model needs.
     keep = ["tokens", "labels"]
     combined = {}
     for split in ["train", "validation", "test"]:

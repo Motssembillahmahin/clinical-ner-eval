@@ -51,7 +51,7 @@ def train_model(model_key: str, dataset_names=None, label_mode="harmonized"):
         metric_for_best_model="eval_loss",
         seed=TRAIN_CONFIG["seed"],
         report_to="none",
-        fp16=True,  # T4 supports fp16; speeds up training and saves memory
+        fp16=True,
     )
 
     collator = DataCollatorForTokenClassification(tokenizer)
@@ -74,10 +74,8 @@ def train_model(model_key: str, dataset_names=None, label_mode="harmonized"):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", choices=list(MODELS), default=None,
-                        help="train a single model; default trains all")
-    parser.add_argument("--dataset", default=None,
-                        help="single dataset key (for showcase/native runs)")
+    parser.add_argument("--model", choices=list(MODELS), default=None)
+    parser.add_argument("--dataset", default=None)
     parser.add_argument("--label-mode", default="harmonized",
                         choices=["harmonized", "native"])
     a = parser.parse_args()

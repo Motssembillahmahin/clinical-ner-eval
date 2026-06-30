@@ -1,9 +1,8 @@
 """Evaluation harness.
 
 Loads each trained checkpoint, predicts on the shared test set, and computes
-entity-level precision/recall/F1 via seqeval (the correct metric for NER —
-token-level over-counts). Produces a single comparison table across models and
-entity types and writes JSON + CSV to RESULTS_DIR.
+entity-level precision/recall/F1 via seqeval. Produces a comparison table across
+models and entity types and writes JSON + CSV to RESULTS_DIR.
 """
 
 import json
@@ -24,7 +23,6 @@ from .tokenize import build_tokenize_fn
 
 
 def _align_predictions(preds, label_ids, id2label):
-    """Strip -100 positions and convert ids to BIO label strings per sentence."""
     pred_ids = np.argmax(preds, axis=2)
     true_labels, true_preds = [], []
     for p_row, l_row in zip(pred_ids, label_ids):
@@ -56,7 +54,6 @@ def evaluate_model(model_key, dataset_names=None, label_mode="harmonized"):
         output.predictions, output.label_ids, id2label
     )
 
-    # output_dict gives per-entity-type precision/recall/f1 + micro/macro avgs
     report = classification_report(
         true_labels, true_preds, output_dict=True, zero_division=0
     )
@@ -96,7 +93,6 @@ def main():
     csv_path = os.path.join(RESULTS_DIR, "comparison.csv")
     df.to_csv(csv_path, index=False)
 
-    # Print a readable pivot: model x entity -> F1
     if not df.empty:
         pivot = df.pivot(index="model", columns="entity", values="f1")
         print("\n=== F1 comparison (model x entity) ===")
