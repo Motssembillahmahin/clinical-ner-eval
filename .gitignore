@@ -18,9 +18,8 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints/
 
-# Model checkpoints and results
+# Model checkpoints (large binary files, not tracked)
 checkpoints/
-results/
 *.bin
 *.safetensors
 *.pt
