@@ -17,7 +17,7 @@ _LABELS = ["O", "B-Disease", "I-Disease", "B-Chemical", "I-Chemical"]
 class BC5CDRAdapter(BaseNERAdapter):
     def load(self) -> DatasetDict:
         # tner/bc5cdr uses a deprecated loading script; bigbio/bc5cdr ships as Parquet.
-        raw = load_dataset("bigbio/bc5cdr", name="bc5cdr_bigbio_ner", trust_remote_code=True)
+        raw = load_dataset("bigbio/bc5cdr", name="bc5cdr_bigbio_ner")
 
         def convert(example):
             # tags column is already a list of BIO strings

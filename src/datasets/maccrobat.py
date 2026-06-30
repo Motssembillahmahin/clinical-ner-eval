@@ -82,8 +82,10 @@ def _doc_to_example(doc, label_mode):
 
 
 _DATASET_CANDIDATES = [
-    ("bigbio/maccrobat", "maccrobat_bigbio_kb"),
-    ("bigbio/maccrobat2018", "maccrobat2018_bigbio_kb"),
+    ("bigbio/maccrobat", "maccrobat_bigbio_kb", False),
+    ("bigbio/maccrobat2018", "maccrobat2018_bigbio_kb", False),
+    ("bigbio/maccrobat", "maccrobat_bigbio_kb", True),          # fallback: older hub format
+    ("bigbio/maccrobat2018", "maccrobat2018_bigbio_kb", True),
 ]
 
 
@@ -91,9 +93,10 @@ class MaccrobatAdapter(BaseNERAdapter):
     def load(self) -> DatasetDict:
         raw = None
         last_err = None
-        for ds_id, cfg in _DATASET_CANDIDATES:
+        for ds_id, cfg, trc in _DATASET_CANDIDATES:
             try:
-                raw = load_dataset(ds_id, name=cfg, trust_remote_code=True)
+                kw = {"trust_remote_code": True} if trc else {}
+                raw = load_dataset(ds_id, name=cfg, **kw)
                 break
             except Exception as e:
                 last_err = e
