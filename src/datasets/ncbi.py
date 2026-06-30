@@ -1,22 +1,73 @@
-from datasets import load_dataset, DatasetDict
+"""NCBI Disease adapter using bigbio/ncbi_disease (bigbio_kb config)."""
+
+import re
+
+from datasets import Dataset, DatasetDict, load_dataset
 
 from .base import BaseNERAdapter
 
-# ncbi_disease ClassLabel: 0=O, 1=B-Disease, 2=I-Disease
-_ID2BIO = {0: "O", 1: "B-Disease", 2: "I-Disease"}
+# All entity types in NCBI Disease corpus map to Disease
+_DISEASE_TYPES = {
+    "Disease", "SpecificDisease", "CompositeMention", "DiseaseClass", "Modifier",
+}
 _LABELS = ["O", "B-Disease", "I-Disease", "B-Chemical", "I-Chemical"]
+_TOKEN_RE = re.compile(r"\S+")
+
+
+def _doc_to_example(doc, label_mode):
+    passages = sorted(doc["passages"], key=lambda p: p["offsets"][0][0])
+    if not passages:
+        return None
+    text = passages[0]["text"][0]
+    base = passages[0]["offsets"][0][0]
+
+    tokens, spans = [], []
+    for m in _TOKEN_RE.finditer(text):
+        tokens.append(m.group())
+        spans.append((base + m.start(), base + m.end()))
+    if not tokens:
+        return None
+
+    bio = ["O"] * len(tokens)
+    for entity in doc["entities"]:
+        etype = entity["type"]
+        if label_mode == "harmonized":
+            if etype in _DISEASE_TYPES:
+                prefix = "Disease"
+            else:
+                continue
+        else:
+            prefix = etype
+
+        for char_start, char_end in entity["offsets"]:
+            first = True
+            for ti, (ts, te) in enumerate(spans):
+                if te > char_start and ts < char_end:
+                    if bio[ti] == "O":
+                        bio[ti] = f"B-{prefix}" if first else f"I-{prefix}"
+                    first = False
+
+    return {"tokens": tokens, "bio": bio}
 
 
 class NCBIDiseaseAdapter(BaseNERAdapter):
     def load(self) -> DatasetDict:
-        # datasets<3.0 required: v3 removed loading-script support entirely.
-        raw = load_dataset("ncbi_disease", trust_remote_code=True)
+        # bigbio/ncbi_disease requires the `bioc` package (part of the loading script).
+        # ncbi_disease_bigbio_kb is the only available bigbio config.
+        raw = load_dataset(
+            "bigbio/ncbi_disease", name="ncbi_disease_bigbio_kb", trust_remote_code=True
+        )
 
-        def convert(example):
-            example["bio"] = [_ID2BIO[t] for t in example["ner_tags"]]
-            return example
+        split_examples = {}
+        for split in raw:
+            examples = [
+                ex for doc in raw[split]
+                for ex in [_doc_to_example(doc, self.label_mode)]
+                if ex
+            ]
+            split_examples[split] = Dataset.from_list(examples)
 
-        return DatasetDict({s: raw[s].map(convert) for s in raw})
+        return DatasetDict(split_examples)
 
     def label_list(self):
         return _LABELS
