@@ -1,0 +1,16 @@
+model,entity,precision,recall,f1,support
+bio_clinicalbert,Chemical,0.8443,0.8598,0.852,656
+bio_clinicalbert,Disease,0.6925,0.7709,0.7296,707
+bio_clinicalbert,micro avg,0.7622,0.8136,0.7871,1363
+bio_clinicalbert,macro avg,0.7684,0.8153,0.7908,1363
+bio_clinicalbert,weighted avg,0.7656,0.8136,0.7885,1363
+biobert,Chemical,0.8591,0.8826,0.8707,656
+biobert,Disease,0.7725,0.826,0.7984,707
+biobert,micro avg,0.8133,0.8533,0.8328,1363
+biobert,macro avg,0.8158,0.8543,0.8345,1363
+biobert,weighted avg,0.8141,0.8533,0.8332,1363
+pubmedbert,Chemical,0.8492,0.8841,0.8663,656
+pubmedbert,Disease,0.7605,0.7907,0.7753,707
+pubmedbert,micro avg,0.8032,0.8357,0.8191,1363
+pubmedbert,macro avg,0.8049,0.8374,0.8208,1363
+pubmedbert,weighted avg,0.8032,0.8357,0.8191,1363

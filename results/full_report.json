@@ -1,0 +1,98 @@
+{
+  "bio_clinicalbert": {
+    "Chemical": {
+      "precision": 0.844311377245509,
+      "recall": 0.8597560975609756,
+      "f1-score": 0.851963746223565,
+      "support": 656
+    },
+    "Disease": {
+      "precision": 0.6925031766200762,
+      "recall": 0.7708628005657708,
+      "f1-score": 0.7295850066934405,
+      "support": 707
+    },
+    "micro avg": {
+      "precision": 0.7621993127147766,
+      "recall": 0.8136463683052091,
+      "f1-score": 0.78708303761533,
+      "support": 1363
+    },
+    "macro avg": {
+      "precision": 0.7684072769327925,
+      "recall": 0.8153094490633732,
+      "f1-score": 0.7907743764585027,
+      "support": 1363
+    },
+    "weighted avg": {
+      "precision": 0.7655671381830137,
+      "recall": 0.8136463683052091,
+      "f1-score": 0.7884848255722092,
+      "support": 1363
+    }
+  },
+  "biobert": {
+    "Chemical": {
+      "precision": 0.8590504451038575,
+      "recall": 0.8826219512195121,
+      "f1-score": 0.8706766917293233,
+      "support": 656
+    },
+    "Disease": {
+      "precision": 0.7724867724867724,
+      "recall": 0.826025459688826,
+      "f1-score": 0.7983595352016404,
+      "support": 707
+    },
+    "micro avg": {
+      "precision": 0.8132867132867133,
+      "recall": 0.8532648569332355,
+      "f1-score": 0.8327962764052991,
+      "support": 1363
+    },
+    "macro avg": {
+      "precision": 0.815768608795315,
+      "recall": 0.854323705454169,
+      "f1-score": 0.8345181134654818,
+      "support": 1363
+    },
+    "weighted avg": {
+      "precision": 0.8141491123523689,
+      "recall": 0.8532648569332355,
+      "f1-score": 0.8331651512560498,
+      "support": 1363
+    }
+  },
+  "pubmedbert": {
+    "Chemical": {
+      "precision": 0.849194729136164,
+      "recall": 0.8841463414634146,
+      "f1-score": 0.8663181478715459,
+      "support": 656
+    },
+    "Disease": {
+      "precision": 0.7605442176870748,
+      "recall": 0.7906647807637907,
+      "f1-score": 0.7753120665742024,
+      "support": 707
+    },
+    "micro avg": {
+      "precision": 0.8032440056417489,
+      "recall": 0.8356566397652238,
+      "f1-score": 0.8191298094210715,
+      "support": 1363
+    },
+    "macro avg": {
+      "precision": 0.8048694734116194,
+      "recall": 0.8374055611136026,
+      "f1-score": 0.8208151072228742,
+      "support": 1363
+    },
+    "weighted avg": {
+      "precision": 0.8032109348628653,
+      "recall": 0.8356566397652238,
+      "f1-score": 0.8191124989520876,
+      "support": 1363
+    }
+  }
+}
