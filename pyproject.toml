@@ -13,6 +13,7 @@ dependencies = [
     "accelerate>=0.33",
     "numpy>=1.26",
     "pandas>=2.2",
+    "sentencepiece>=0.1.99",
 ]
 
 [tool.uv]
