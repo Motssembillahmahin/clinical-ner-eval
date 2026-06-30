@@ -81,13 +81,26 @@ def _doc_to_example(doc, label_mode):
     return {"tokens": tokens, "bio": bio}
 
 
+_DATASET_CANDIDATES = [
+    ("bigbio/maccrobat", "maccrobat_bigbio_kb"),
+    ("bigbio/maccrobat2018", "maccrobat2018_bigbio_kb"),
+]
+
+
 class MaccrobatAdapter(BaseNERAdapter):
     def load(self) -> DatasetDict:
-        raw = load_dataset(
-            "bigbio/maccrobat2018",
-            name="maccrobat2018_bigbio_kb",
-            trust_remote_code=True,
-        )
+        raw = None
+        last_err = None
+        for ds_id, cfg in _DATASET_CANDIDATES:
+            try:
+                raw = load_dataset(ds_id, name=cfg, trust_remote_code=True)
+                break
+            except Exception as e:
+                last_err = e
+        if raw is None:
+            raise RuntimeError(
+                f"Could not load MACCROBAT from any known Hub path. Last error: {last_err}"
+            )
 
         examples = []
         for split in raw:
