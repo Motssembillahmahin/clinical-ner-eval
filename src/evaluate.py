@@ -47,7 +47,7 @@ def evaluate_model(model_key, dataset_names=None, label_mode="harmonized"):
 
     model = AutoModelForTokenClassification.from_pretrained(ckpt)
     collator = DataCollatorForTokenClassification(tokenizer)
-    trainer = Trainer(model=model, data_collator=collator, tokenizer=tokenizer)
+    trainer = Trainer(model=model, data_collator=collator, processing_class=tokenizer)
 
     output = trainer.predict(tokenized["test"])
     true_labels, true_preds = _align_predictions(
