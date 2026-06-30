@@ -62,7 +62,7 @@ def train_model(model_key: str, dataset_names=None, label_mode="harmonized"):
         train_dataset=tokenized["train"],
         eval_dataset=tokenized.get("validation"),
         data_collator=collator,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
     )
 
     trainer.train()
