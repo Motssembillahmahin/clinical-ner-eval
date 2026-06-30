@@ -17,7 +17,8 @@ from transformers import (
     TrainingArguments,
 )
 
-from .config import CHECKPOINT_DIR, MODELS, TRAIN_CONFIG, label_maps
+from . import config as _config
+from .config import MODELS, TRAIN_CONFIG, label_maps
 from .datasets import DEFAULT_COMBINATION, build_dataset
 from .tokenize import build_tokenize_fn
 
@@ -47,7 +48,7 @@ def train_model(model_key: str, dataset_names=None, label_mode="harmonized"):
             label2id=label2id,
         )
 
-    out_dir = os.path.join(CHECKPOINT_DIR, model_key)
+    out_dir = os.path.join(_config.CHECKPOINT_DIR, model_key)
     args = TrainingArguments(
         output_dir=out_dir,
         num_train_epochs=TRAIN_CONFIG["num_train_epochs"],
@@ -96,6 +97,7 @@ def main():
     for k in keys:
         print(f"\n=== training {k} ===")
         train_model(k, dataset_names=names, label_mode=a.label_mode)
+
 
 
 if __name__ == "__main__":

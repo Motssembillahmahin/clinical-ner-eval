@@ -26,7 +26,8 @@ from transformers import (
     Trainer,
 )
 
-from .config import CHECKPOINT_DIR, MODELS, RESULTS_DIR, label_maps
+from . import config as _config
+from .config import MODELS, label_maps
 from .datasets import DEFAULT_COMBINATION, build_dataset
 from .tokenize import build_tokenize_fn
 
@@ -47,7 +48,7 @@ def _align_predictions(preds, label_ids, id2label):
 
 
 def evaluate_model(model_key, dataset_names=None, label_mode="harmonized"):
-    ckpt = os.path.join(CHECKPOINT_DIR, model_key)
+    ckpt = os.path.join(_config.CHECKPOINT_DIR, model_key)
     ds, labels = build_dataset(dataset_names or DEFAULT_COMBINATION, label_mode)
     _, id2label = label_maps(labels)
 
@@ -70,12 +71,12 @@ def evaluate_model(model_key, dataset_names=None, label_mode="harmonized"):
 
 
 def main():
-    os.makedirs(RESULTS_DIR, exist_ok=True)
+    os.makedirs(_config.RESULTS_DIR, exist_ok=True)
     rows = []
     full = {}
 
     for model_key in MODELS:
-        ckpt = os.path.join(CHECKPOINT_DIR, model_key)
+        ckpt = os.path.join(_config.CHECKPOINT_DIR, model_key)
         if not os.path.isdir(ckpt):
             print(f"[skip] no checkpoint for {model_key}")
             continue
@@ -95,7 +96,7 @@ def main():
                 "support": scores["support"],
             })
 
-    with open(os.path.join(RESULTS_DIR, "full_report.json"), "w") as f:
+    with open(os.path.join(_config.RESULTS_DIR, "full_report.json"), "w") as f:
         json.dump(full, f, indent=2, cls=_NpEncoder)
 
     df = pd.DataFrame(rows)
@@ -107,6 +108,7 @@ def main():
         print("\n=== F1 comparison (model x entity) ===")
         print(pivot.to_string())
     print(f"\nWrote {csv_path}")
+
 
 
 if __name__ == "__main__":
