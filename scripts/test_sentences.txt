@@ -1,0 +1,360 @@
+The patient has a history of type 2 diabetes.
+The patient has a history of hypertension.
+The patient has a history of asthma.
+The patient has a history of breast cancer.
+The patient has a history of pneumonia.
+The patient has a history of chronic kidney disease.
+The patient has a history of rheumatoid arthritis.
+The patient has a history of epilepsy.
+The patient has a history of major depressive disorder.
+The patient has a history of Parkinson's disease.
+The patient has a history of Alzheimer's disease.
+The patient has a history of congestive heart failure.
+The patient has a history of atrial fibrillation.
+The patient has a history of chronic obstructive pulmonary disease.
+The patient has a history of psoriasis.
+The patient has a history of hepatitis C.
+The patient has a history of tuberculosis.
+The patient has a history of multiple sclerosis.
+The patient has a history of osteoporosis.
+The patient has a history of migraine.
+She was recently diagnosed with type 2 diabetes.
+She was recently diagnosed with hypertension.
+She was recently diagnosed with asthma.
+She was recently diagnosed with breast cancer.
+She was recently diagnosed with pneumonia.
+She was recently diagnosed with chronic kidney disease.
+She was recently diagnosed with rheumatoid arthritis.
+She was recently diagnosed with epilepsy.
+She was recently diagnosed with major depressive disorder.
+She was recently diagnosed with Parkinson's disease.
+She was recently diagnosed with Alzheimer's disease.
+She was recently diagnosed with congestive heart failure.
+She was recently diagnosed with atrial fibrillation.
+She was recently diagnosed with chronic obstructive pulmonary disease.
+She was recently diagnosed with psoriasis.
+She was recently diagnosed with hepatitis C.
+She was recently diagnosed with tuberculosis.
+She was recently diagnosed with multiple sclerosis.
+She was recently diagnosed with osteoporosis.
+She was recently diagnosed with migraine.
+type 2 diabetes was confirmed after further testing.
+hypertension was confirmed after further testing.
+asthma was confirmed after further testing.
+breast cancer was confirmed after further testing.
+pneumonia was confirmed after further testing.
+chronic kidney disease was confirmed after further testing.
+rheumatoid arthritis was confirmed after further testing.
+epilepsy was confirmed after further testing.
+major depressive disorder was confirmed after further testing.
+Parkinson's disease was confirmed after further testing.
+Alzheimer's disease was confirmed after further testing.
+congestive heart failure was confirmed after further testing.
+atrial fibrillation was confirmed after further testing.
+chronic obstructive pulmonary disease was confirmed after further testing.
+psoriasis was confirmed after further testing.
+hepatitis C was confirmed after further testing.
+tuberculosis was confirmed after further testing.
+multiple sclerosis was confirmed after further testing.
+osteoporosis was confirmed after further testing.
+migraine was confirmed after further testing.
+He was admitted to the hospital due to complications from type 2 diabetes.
+He was admitted to the hospital due to complications from hypertension.
+He was admitted to the hospital due to complications from asthma.
+He was admitted to the hospital due to complications from breast cancer.
+He was admitted to the hospital due to complications from pneumonia.
+He was admitted to the hospital due to complications from chronic kidney disease.
+He was admitted to the hospital due to complications from rheumatoid arthritis.
+He was admitted to the hospital due to complications from epilepsy.
+He was admitted to the hospital due to complications from major depressive disorder.
+He was admitted to the hospital due to complications from Parkinson's disease.
+He was admitted to the hospital due to complications from Alzheimer's disease.
+He was admitted to the hospital due to complications from congestive heart failure.
+He was admitted to the hospital due to complications from atrial fibrillation.
+He was admitted to the hospital due to complications from chronic obstructive pulmonary disease.
+He was admitted to the hospital due to complications from psoriasis.
+He was admitted to the hospital due to complications from hepatitis C.
+He was admitted to the hospital due to complications from tuberculosis.
+He was admitted to the hospital due to complications from multiple sclerosis.
+He was admitted to the hospital due to complications from osteoporosis.
+He was admitted to the hospital due to complications from migraine.
+The chart notes an ongoing struggle with type 2 diabetes.
+The chart notes an ongoing struggle with hypertension.
+The chart notes an ongoing struggle with asthma.
+The chart notes an ongoing struggle with breast cancer.
+The chart notes an ongoing struggle with pneumonia.
+The chart notes an ongoing struggle with chronic kidney disease.
+The chart notes an ongoing struggle with rheumatoid arthritis.
+The chart notes an ongoing struggle with epilepsy.
+The chart notes an ongoing struggle with major depressive disorder.
+The chart notes an ongoing struggle with Parkinson's disease.
+The chart notes an ongoing struggle with Alzheimer's disease.
+The chart notes an ongoing struggle with congestive heart failure.
+The chart notes an ongoing struggle with atrial fibrillation.
+The chart notes an ongoing struggle with chronic obstructive pulmonary disease.
+The chart notes an ongoing struggle with psoriasis.
+The chart notes an ongoing struggle with hepatitis C.
+The chart notes an ongoing struggle with tuberculosis.
+The chart notes an ongoing struggle with multiple sclerosis.
+The chart notes an ongoing struggle with osteoporosis.
+The chart notes an ongoing struggle with migraine.
+The patient was started on metformin to manage symptoms.
+The patient was started on lisinopril to manage symptoms.
+The patient was started on albuterol to manage symptoms.
+The patient was started on tamoxifen to manage symptoms.
+The patient was started on amoxicillin to manage symptoms.
+The patient was started on furosemide to manage symptoms.
+The patient was started on methotrexate to manage symptoms.
+The patient was started on levetiracetam to manage symptoms.
+The patient was started on sertraline to manage symptoms.
+The patient was started on levodopa to manage symptoms.
+The patient was started on donepezil to manage symptoms.
+The patient was started on carvedilol to manage symptoms.
+The patient was started on warfarin to manage symptoms.
+The patient was started on tiotropium to manage symptoms.
+The patient was started on prednisone to manage symptoms.
+The patient was started on sofosbuvir to manage symptoms.
+The patient was started on isoniazid to manage symptoms.
+The patient was started on interferon beta-1a to manage symptoms.
+The patient was started on alendronate to manage symptoms.
+The patient was started on sumatriptan to manage symptoms.
+metformin was prescribed at a low dose.
+lisinopril was prescribed at a low dose.
+albuterol was prescribed at a low dose.
+tamoxifen was prescribed at a low dose.
+amoxicillin was prescribed at a low dose.
+furosemide was prescribed at a low dose.
+methotrexate was prescribed at a low dose.
+levetiracetam was prescribed at a low dose.
+sertraline was prescribed at a low dose.
+levodopa was prescribed at a low dose.
+donepezil was prescribed at a low dose.
+carvedilol was prescribed at a low dose.
+warfarin was prescribed at a low dose.
+tiotropium was prescribed at a low dose.
+prednisone was prescribed at a low dose.
+sofosbuvir was prescribed at a low dose.
+isoniazid was prescribed at a low dose.
+interferon beta-1a was prescribed at a low dose.
+alendronate was prescribed at a low dose.
+sumatriptan was prescribed at a low dose.
+The physician discontinued metformin due to side effects.
+The physician discontinued lisinopril due to side effects.
+The physician discontinued albuterol due to side effects.
+The physician discontinued tamoxifen due to side effects.
+The physician discontinued amoxicillin due to side effects.
+The physician discontinued furosemide due to side effects.
+The physician discontinued methotrexate due to side effects.
+The physician discontinued levetiracetam due to side effects.
+The physician discontinued sertraline due to side effects.
+The physician discontinued levodopa due to side effects.
+The physician discontinued donepezil due to side effects.
+The physician discontinued carvedilol due to side effects.
+The physician discontinued warfarin due to side effects.
+The physician discontinued tiotropium due to side effects.
+The physician discontinued prednisone due to side effects.
+The physician discontinued sofosbuvir due to side effects.
+The physician discontinued isoniazid due to side effects.
+The physician discontinued interferon beta-1a due to side effects.
+The physician discontinued alendronate due to side effects.
+The physician discontinued sumatriptan due to side effects.
+A daily dose of metformin was recommended.
+A daily dose of lisinopril was recommended.
+A daily dose of albuterol was recommended.
+A daily dose of tamoxifen was recommended.
+A daily dose of amoxicillin was recommended.
+A daily dose of furosemide was recommended.
+A daily dose of methotrexate was recommended.
+A daily dose of levetiracetam was recommended.
+A daily dose of sertraline was recommended.
+A daily dose of levodopa was recommended.
+A daily dose of donepezil was recommended.
+A daily dose of carvedilol was recommended.
+A daily dose of warfarin was recommended.
+A daily dose of tiotropium was recommended.
+A daily dose of prednisone was recommended.
+A daily dose of sofosbuvir was recommended.
+A daily dose of isoniazid was recommended.
+A daily dose of interferon beta-1a was recommended.
+A daily dose of alendronate was recommended.
+A daily dose of sumatriptan was recommended.
+metformin therapy was initiated last week.
+lisinopril therapy was initiated last week.
+albuterol therapy was initiated last week.
+tamoxifen therapy was initiated last week.
+amoxicillin therapy was initiated last week.
+furosemide therapy was initiated last week.
+methotrexate therapy was initiated last week.
+levetiracetam therapy was initiated last week.
+sertraline therapy was initiated last week.
+levodopa therapy was initiated last week.
+donepezil therapy was initiated last week.
+carvedilol therapy was initiated last week.
+warfarin therapy was initiated last week.
+tiotropium therapy was initiated last week.
+prednisone therapy was initiated last week.
+sofosbuvir therapy was initiated last week.
+isoniazid therapy was initiated last week.
+interferon beta-1a therapy was initiated last week.
+alendronate therapy was initiated last week.
+sumatriptan therapy was initiated last week.
+The patient with type 2 diabetes was treated with metformin.
+The patient with hypertension was treated with lisinopril.
+The patient with asthma was treated with albuterol.
+The patient with breast cancer was treated with tamoxifen.
+The patient with pneumonia was treated with amoxicillin.
+The patient with chronic kidney disease was treated with furosemide.
+The patient with rheumatoid arthritis was treated with methotrexate.
+The patient with epilepsy was treated with levetiracetam.
+The patient with major depressive disorder was treated with sertraline.
+The patient with Parkinson's disease was treated with levodopa.
+The patient with Alzheimer's disease was treated with donepezil.
+The patient with congestive heart failure was treated with carvedilol.
+The patient with atrial fibrillation was treated with warfarin.
+The patient with chronic obstructive pulmonary disease was treated with tiotropium.
+The patient with psoriasis was treated with prednisone.
+The patient with hepatitis C was treated with sofosbuvir.
+The patient with tuberculosis was treated with isoniazid.
+The patient with multiple sclerosis was treated with interferon beta-1a.
+The patient with osteoporosis was treated with alendronate.
+The patient with migraine was treated with sumatriptan.
+metformin is commonly used to manage type 2 diabetes.
+lisinopril is commonly used to manage hypertension.
+albuterol is commonly used to manage asthma.
+tamoxifen is commonly used to manage breast cancer.
+amoxicillin is commonly used to manage pneumonia.
+furosemide is commonly used to manage chronic kidney disease.
+methotrexate is commonly used to manage rheumatoid arthritis.
+levetiracetam is commonly used to manage epilepsy.
+sertraline is commonly used to manage major depressive disorder.
+levodopa is commonly used to manage Parkinson's disease.
+donepezil is commonly used to manage Alzheimer's disease.
+carvedilol is commonly used to manage congestive heart failure.
+warfarin is commonly used to manage atrial fibrillation.
+tiotropium is commonly used to manage chronic obstructive pulmonary disease.
+prednisone is commonly used to manage psoriasis.
+sofosbuvir is commonly used to manage hepatitis C.
+isoniazid is commonly used to manage tuberculosis.
+interferon beta-1a is commonly used to manage multiple sclerosis.
+alendronate is commonly used to manage osteoporosis.
+sumatriptan is commonly used to manage migraine.
+Following the diagnosis of type 2 diabetes, the patient began taking metformin.
+Following the diagnosis of hypertension, the patient began taking lisinopril.
+Following the diagnosis of asthma, the patient began taking albuterol.
+Following the diagnosis of breast cancer, the patient began taking tamoxifen.
+Following the diagnosis of pneumonia, the patient began taking amoxicillin.
+Following the diagnosis of chronic kidney disease, the patient began taking furosemide.
+Following the diagnosis of rheumatoid arthritis, the patient began taking methotrexate.
+Following the diagnosis of epilepsy, the patient began taking levetiracetam.
+Following the diagnosis of major depressive disorder, the patient began taking sertraline.
+Following the diagnosis of Parkinson's disease, the patient began taking levodopa.
+Following the diagnosis of Alzheimer's disease, the patient began taking donepezil.
+Following the diagnosis of congestive heart failure, the patient began taking carvedilol.
+Following the diagnosis of atrial fibrillation, the patient began taking warfarin.
+Following the diagnosis of chronic obstructive pulmonary disease, the patient began taking tiotropium.
+Following the diagnosis of psoriasis, the patient began taking prednisone.
+Following the diagnosis of hepatitis C, the patient began taking sofosbuvir.
+Following the diagnosis of tuberculosis, the patient began taking isoniazid.
+Following the diagnosis of multiple sclerosis, the patient began taking interferon beta-1a.
+Following the diagnosis of osteoporosis, the patient began taking alendronate.
+Following the diagnosis of migraine, the patient began taking sumatriptan.
+Long-term use of metformin improved symptoms of type 2 diabetes.
+Long-term use of lisinopril improved symptoms of hypertension.
+Long-term use of albuterol improved symptoms of asthma.
+Long-term use of tamoxifen improved symptoms of breast cancer.
+Long-term use of amoxicillin improved symptoms of pneumonia.
+Long-term use of furosemide improved symptoms of chronic kidney disease.
+Long-term use of methotrexate improved symptoms of rheumatoid arthritis.
+Long-term use of levetiracetam improved symptoms of epilepsy.
+Long-term use of sertraline improved symptoms of major depressive disorder.
+Long-term use of levodopa improved symptoms of Parkinson's disease.
+Long-term use of donepezil improved symptoms of Alzheimer's disease.
+Long-term use of carvedilol improved symptoms of congestive heart failure.
+Long-term use of warfarin improved symptoms of atrial fibrillation.
+Long-term use of tiotropium improved symptoms of chronic obstructive pulmonary disease.
+Long-term use of prednisone improved symptoms of psoriasis.
+Long-term use of sofosbuvir improved symptoms of hepatitis C.
+Long-term use of isoniazid improved symptoms of tuberculosis.
+Long-term use of interferon beta-1a improved symptoms of multiple sclerosis.
+Long-term use of alendronate improved symptoms of osteoporosis.
+Long-term use of sumatriptan improved symptoms of migraine.
+The clinical trial evaluated metformin in patients with type 2 diabetes.
+The clinical trial evaluated lisinopril in patients with hypertension.
+The clinical trial evaluated albuterol in patients with asthma.
+The clinical trial evaluated tamoxifen in patients with breast cancer.
+The clinical trial evaluated amoxicillin in patients with pneumonia.
+The clinical trial evaluated furosemide in patients with chronic kidney disease.
+The clinical trial evaluated methotrexate in patients with rheumatoid arthritis.
+The clinical trial evaluated levetiracetam in patients with epilepsy.
+The clinical trial evaluated sertraline in patients with major depressive disorder.
+The clinical trial evaluated levodopa in patients with Parkinson's disease.
+The clinical trial evaluated donepezil in patients with Alzheimer's disease.
+The clinical trial evaluated carvedilol in patients with congestive heart failure.
+The clinical trial evaluated warfarin in patients with atrial fibrillation.
+The clinical trial evaluated tiotropium in patients with chronic obstructive pulmonary disease.
+The clinical trial evaluated prednisone in patients with psoriasis.
+The clinical trial evaluated sofosbuvir in patients with hepatitis C.
+The clinical trial evaluated isoniazid in patients with tuberculosis.
+The clinical trial evaluated interferon beta-1a in patients with multiple sclerosis.
+The clinical trial evaluated alendronate in patients with osteoporosis.
+The clinical trial evaluated sumatriptan in patients with migraine.
+Despite treatment with metformin, the patient's type 2 diabetes progressed.
+Despite treatment with lisinopril, the patient's hypertension progressed.
+Despite treatment with albuterol, the patient's asthma progressed.
+Despite treatment with tamoxifen, the patient's breast cancer progressed.
+Despite treatment with amoxicillin, the patient's pneumonia progressed.
+Despite treatment with furosemide, the patient's chronic kidney disease progressed.
+Despite treatment with methotrexate, the patient's rheumatoid arthritis progressed.
+Despite treatment with levetiracetam, the patient's epilepsy progressed.
+Despite treatment with sertraline, the patient's major depressive disorder progressed.
+Despite treatment with levodopa, the patient's Parkinson's disease progressed.
+Despite treatment with donepezil, the patient's Alzheimer's disease progressed.
+Despite treatment with carvedilol, the patient's congestive heart failure progressed.
+Despite treatment with warfarin, the patient's atrial fibrillation progressed.
+Despite treatment with tiotropium, the patient's chronic obstructive pulmonary disease progressed.
+Despite treatment with prednisone, the patient's psoriasis progressed.
+Despite treatment with sofosbuvir, the patient's hepatitis C progressed.
+Despite treatment with isoniazid, the patient's tuberculosis progressed.
+Despite treatment with interferon beta-1a, the patient's multiple sclerosis progressed.
+Despite treatment with alendronate, the patient's osteoporosis progressed.
+Despite treatment with sumatriptan, the patient's migraine progressed.
+metformin was switched to an alternative after the patient's type 2 diabetes worsened.
+lisinopril was switched to an alternative after the patient's hypertension worsened.
+albuterol was switched to an alternative after the patient's asthma worsened.
+tamoxifen was switched to an alternative after the patient's breast cancer worsened.
+amoxicillin was switched to an alternative after the patient's pneumonia worsened.
+furosemide was switched to an alternative after the patient's chronic kidney disease worsened.
+methotrexate was switched to an alternative after the patient's rheumatoid arthritis worsened.
+levetiracetam was switched to an alternative after the patient's epilepsy worsened.
+sertraline was switched to an alternative after the patient's major depressive disorder worsened.
+levodopa was switched to an alternative after the patient's Parkinson's disease worsened.
+donepezil was switched to an alternative after the patient's Alzheimer's disease worsened.
+carvedilol was switched to an alternative after the patient's congestive heart failure worsened.
+warfarin was switched to an alternative after the patient's atrial fibrillation worsened.
+tiotropium was switched to an alternative after the patient's chronic obstructive pulmonary disease worsened.
+prednisone was switched to an alternative after the patient's psoriasis worsened.
+sofosbuvir was switched to an alternative after the patient's hepatitis C worsened.
+isoniazid was switched to an alternative after the patient's tuberculosis worsened.
+interferon beta-1a was switched to an alternative after the patient's multiple sclerosis worsened.
+alendronate was switched to an alternative after the patient's osteoporosis worsened.
+sumatriptan was switched to an alternative after the patient's migraine worsened.
+Guidelines recommend metformin as first-line therapy for type 2 diabetes.
+Guidelines recommend lisinopril as first-line therapy for hypertension.
+Guidelines recommend albuterol as first-line therapy for asthma.
+Guidelines recommend tamoxifen as first-line therapy for breast cancer.
+Guidelines recommend amoxicillin as first-line therapy for pneumonia.
+Guidelines recommend furosemide as first-line therapy for chronic kidney disease.
+Guidelines recommend methotrexate as first-line therapy for rheumatoid arthritis.
+Guidelines recommend levetiracetam as first-line therapy for epilepsy.
+Guidelines recommend sertraline as first-line therapy for major depressive disorder.
+Guidelines recommend levodopa as first-line therapy for Parkinson's disease.
+Guidelines recommend donepezil as first-line therapy for Alzheimer's disease.
+Guidelines recommend carvedilol as first-line therapy for congestive heart failure.
+Guidelines recommend warfarin as first-line therapy for atrial fibrillation.
+Guidelines recommend tiotropium as first-line therapy for chronic obstructive pulmonary disease.
+Guidelines recommend prednisone as first-line therapy for psoriasis.
+Guidelines recommend sofosbuvir as first-line therapy for hepatitis C.
+Guidelines recommend isoniazid as first-line therapy for tuberculosis.
+Guidelines recommend interferon beta-1a as first-line therapy for multiple sclerosis.
+Guidelines recommend alendronate as first-line therapy for osteoporosis.
+Guidelines recommend sumatriptan as first-line therapy for migraine.
