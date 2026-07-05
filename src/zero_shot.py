@@ -19,6 +19,7 @@ import numpy as np
 from seqeval.metrics import classification_report
 from transformers import (
     AutoModelForTokenClassification,
+    BertForTokenClassification,
     DataCollatorForTokenClassification,
     Trainer,
 )
@@ -68,15 +69,25 @@ def evaluate_zero_shot(model_key, dataset_names=None):
     tokenizer, tok_fn = build_tokenize_fn(hf_model_id)
     tokenized = ds.map(tok_fn, batched=True, remove_columns=ds["test"].column_names)
 
-    # ignore_mismatched_sizes=True lets us swap in a fresh classification head
-    # sized to our 5 labels instead of whatever the Hub model had (if any).
-    model = AutoModelForTokenClassification.from_pretrained(
-        hf_model_id,
-        num_labels=len(labels),
-        id2label=id2label,
-        label2id=label2id,
-        ignore_mismatched_sizes=True,
-    )
+    try:
+        # ignore_mismatched_sizes=True swaps in a fresh classification head
+        # sized to our 5 labels instead of whatever the Hub model had (if any).
+        model = AutoModelForTokenClassification.from_pretrained(
+            hf_model_id,
+            num_labels=len(labels),
+            id2label=id2label,
+            label2id=label2id,
+            ignore_mismatched_sizes=True,
+        )
+    except ValueError:
+        # Older models (e.g. dmis-lab/biobert-base-cased-v1.1) lack model_type
+        # in config.json; load explicitly as BertForTokenClassification.
+        model = BertForTokenClassification.from_pretrained(
+            hf_model_id,
+            num_labels=len(labels),
+            id2label=id2label,
+            label2id=label2id,
+        )
 
     collator = DataCollatorForTokenClassification(tokenizer)
     trainer = Trainer(model=model, data_collator=collator, processing_class=tokenizer)
